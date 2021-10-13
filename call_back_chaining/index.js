@@ -1,3 +1,4 @@
+//lowercase of string
 function lc(str,rmw1)
 {
     const str1 = str.toLowerCase()
@@ -5,6 +6,7 @@ function lc(str,rmw1)
     rmw1(str1,wnd)
 }
 
+//remove white space:rmw
 function rmw(str1,wnd1)
 {
     const str2 = str1.replace(/\s/g,'')
@@ -12,7 +14,7 @@ function rmw(str1,wnd1)
     wnd1(str2,cnt_pallindrome)
 }
 
-
+//without numerical digit:wnd
 function wnd(str2,cnt_pallindrome1)
 {
     //const str3 = str2.toLowerCase()
@@ -21,6 +23,8 @@ function wnd(str2,cnt_pallindrome1)
     console.log(cnt_pallindrome1(str3))
 }
 
+
+//count pallindrome
 function cnt_pallindrome(str3) {
     let subStrings = [];
 
@@ -38,26 +42,14 @@ function cnt_pallindrome(str3) {
 
 
 
-
+//readline
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
   })
   
   readline.question(`write the sentence`, name => {
-    //console.log(`Hi ${name}!`)
+    //callback starts
     lc(`${name}`,rmw)
     readline.close()
   })
-// function callfunction(str,callback1,callback2)
-// {
-//     let store = str.callback1;
-//     console.log(store);
-//     callback2(str,callback1,callback2);
-// }
-
-
-// function lc(str,toLowerCase,wsp)
-// {
-    
-// }
